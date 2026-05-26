@@ -73,8 +73,6 @@ ${a.join(`
     "eventDate": "2026-08-09",
     "planStartDate": "2026-05-11",
     "planEndDate": "2026-08-09",
-    "createdAt": "2026-05-18T00:00:00Z",
-    "updatedAt": "2026-05-18T00:00:00Z",
     "totalWeeks": 13,
     "generatedBy": "Claude Coach"
   },
@@ -90,19 +88,8 @@ ${a.join(`
         "5K PR 23:24 (9 Mei 2026)",
         "5K PR 24:26 (sebelumnya)"
       ],
-      "peakTrainingLoad": "4-5 sesi/minggu",
       "foundationLevel": "intermediate",
       "yearsInSport": 2
-    },
-    "currentForm": {
-      "weeklyVolume": {
-        "total": 5,
-        "run": 5
-      },
-      "longestSessions": {
-        "run": 5
-      },
-      "consistency": 12
     },
     "raceData": {
       "lastRace": "5K All Out 9 Mei 2026",
@@ -116,29 +103,16 @@ ${a.join(`
       "avgPower": 312,
       "keyFindings": [
         "Positive split: Lap 1-2 di 4:23, Lap 4 collapse ke 5:04",
-        "HR 186 bpm di lap 2 (95% max HR 196) — terlalu agresif keluar",
-        "Cadence drop dari 193 ke 173 spm di lap 4-5 — fatigue form",
-        "GCT 213ms di lap 1-2 menunjukkan potensi mekanik yang baik",
+        "HR 186 bpm di lap 2 (95% maxHR) — terlalu agresif keluar",
+        "Cadence drop 193→173 spm di lap 4-5 — fatigue form",
+        "GCT 213ms di lap 1-2 — potensi mekanik baik",
         "Power 328-330w di lap 1-2 — engine ada, distribusi kurang"
       ]
     },
-    "strengths": [
-      {
-        "sport": "run",
-        "evidence": "GCT & power di lap 1-2 sangat baik, improvement 1:02 dalam satu race"
-      }
-    ],
-    "limiters": [
-      {
-        "sport": "run",
-        "evidence": "Pacing terlalu agresif, HR management, aerobic base belum cukup untuk sub-20"
-      }
-    ],
     "constraints": [
-      "Cuaca panas dan lembap Bekasi (25°C+) — HR 8-12 bpm lebih tinggi dari biasa",
-      "Training 4-5 hari/minggu",
-      "Max HR: 196 bpm, LTHR: 176 bpm",
-      "12 minggu menuju race — lebih compact dari rencana awal 16 minggu"
+      "Cuaca panas lembap Bekasi 25°C+",
+      "4-5 sesi/minggu",
+      "Max HR 196, LTHR 176"
     ]
   },
   "zones": {
@@ -150,56 +124,42 @@ ${a.join(`
           {
             "zone": 1,
             "name": "Recovery",
-            "percentLow": 0,
-            "percentHigh": 0.81,
             "hrLow": 0,
             "hrHigh": 143
           },
           {
             "zone": 2,
             "name": "Aerobic",
-            "percentLow": 0.81,
-            "percentHigh": 0.89,
             "hrLow": 143,
             "hrHigh": 157
           },
           {
             "zone": 3,
             "name": "Tempo",
-            "percentLow": 0.9,
-            "percentHigh": 0.93,
-            "hrLow": 159,
-            "hrHigh": 165
+            "hrLow": 158,
+            "hrHigh": 164
           },
           {
             "zone": 4,
             "name": "Sub-threshold",
-            "percentLow": 0.94,
-            "percentHigh": 0.99,
-            "hrLow": 166,
-            "hrHigh": 175
+            "hrLow": 165,
+            "hrHigh": 174
           },
           {
             "zone": "5a",
             "name": "Threshold",
-            "percentLow": 1.0,
-            "percentHigh": 1.02,
             "hrLow": 176,
             "hrHigh": 179
           },
           {
             "zone": "5b",
             "name": "VO2max",
-            "percentLow": 1.03,
-            "percentHigh": 1.06,
             "hrLow": 181,
             "hrHigh": 187
           },
           {
             "zone": "5c",
             "name": "Anaerobic",
-            "percentLow": 1.07,
-            "percentHigh": 1.2,
             "hrLow": 188,
             "hrHigh": 196
           }
@@ -208,12 +168,11 @@ ${a.join(`
       "pace": {
         "threshold": "4:55/km",
         "easy": "6:10-6:40/km",
-        "marathon": "5:20/km",
         "interval": "4:35/km",
         "repetition": "4:10/km",
         "raceGoal": "3:59/km"
       },
-      "notes": "Max HR 196, LTHR 176. Di panas >28°C tambahkan 10-15 detik/km ke semua zone. Utamakan RPE di atas HR saat cuaca ekstrem."
+      "notes": "Di panas >28°C tambah 10-15 detik/km. Utamakan RPE bukan HR angka."
     }
   },
   "phases": [
@@ -225,18 +184,7 @@ ${a.join(`
       "weeklyKmRange": {
         "low": 24,
         "high": 33
-      },
-      "keyWorkouts": [
-        "Even split 5K practice",
-        "Long run Zone 2",
-        "Cruise intervals"
-      ],
-      "physiologicalGoals": [
-        "Bangun aerobic base",
-        "Program ulang pacing reflex",
-        "Capillarization",
-        "GCT <215ms"
-      ]
+      }
     },
     {
       "name": "Build & Threshold",
@@ -246,19 +194,7 @@ ${a.join(`
       "weeklyKmRange": {
         "low": 29,
         "high": 42
-      },
-      "keyWorkouts": [
-        "Threshold 4-5x2000m",
-        "VO2max 800-1200m",
-        "Race simulation",
-        "Progressive long run"
-      ],
-      "physiologicalGoals": [
-        "Naikkan lactate threshold",
-        "VO2max development",
-        "Race-specific pace",
-        "Peak volume"
-      ]
+      }
     },
     {
       "name": "Peak & Sharpen",
@@ -268,35 +204,17 @@ ${a.join(`
       "weeklyKmRange": {
         "low": 26,
         "high": 34
-      },
-      "keyWorkouts": [
-        "400m race pace reps",
-        "Strides"
-      ],
-      "physiologicalGoals": [
-        "Neuromuscular sharpening",
-        "Confidence building"
-      ]
+      }
     },
     {
       "name": "Taper & Race",
       "startWeek": 12,
       "endWeek": 13,
-      "focus": "Taper + race sim final + execute",
+      "focus": "Taper + execute",
       "weeklyKmRange": {
         "low": 11,
         "high": 26
-      },
-      "keyWorkouts": [
-        "Race simulation final",
-        "Shakeout run",
-        "Race day"
-      ],
-      "physiologicalGoals": [
-        "Fatigue dissipation",
-        "Glycogen supercompensation",
-        "Mental preparation"
-      ]
+      }
     }
   ],
   "weeks": [
@@ -306,9 +224,9 @@ ${a.join(`
       "endDate": "2026-05-17",
       "phase": "Base & Pacing",
       "focus": "Reset pacing mindset — keluar pelan, finish kuat",
-      "targetKm": 26,
+      "targetKm": 24,
       "isRecoveryWeek": false,
-      "coachNote": "Minggu pertama, fokus di 'memperlambat' diri di km 1. Lap 1 harus terasa membosankan pelannya. Percaya prosesnya. Max HR kamu 196, LTHR 176 — semua zone HR disesuaikan.",
+      "coachNote": "Minggu pertama. Pacing rehearsal Kamis: tahan diri di km 1, jangan lebih cepat dari 5:00/km meski terasa mudah. Max HR 196, LTHR 176 — semua HR target disesuaikan.",
       "days": [
         {
           "date": "2026-05-11",
@@ -319,7 +237,7 @@ ${a.join(`
               "sport": "rest",
               "type": "rest",
               "name": "Rest",
-              "description": "Istirahat penuh. Prioritaskan tidur.",
+              "description": "Istirahat penuh.",
               "completed": false
             }
           ]
@@ -352,7 +270,7 @@ ${a.join(`
               "sport": "strength",
               "type": "strength",
               "name": "Strength — foundation",
-              "description": "3 putaran: Goblet squat ×12, Single-leg RDL ×8/kaki, Step-up ×10/kaki, Calf raises ×20, Plank 45 detik, Side plank 30 detik/sisi. Slow dan terkontrol.",
+              "description": "3 putaran: Goblet squat ×12, Single-leg RDL ×8/kaki, Step-up ×10/kaki, Calf raises ×20, Plank 45 detik, Side plank 30 detik/sisi.",
               "durationMinutes": 45,
               "completed": false
             }
@@ -367,11 +285,11 @@ ${a.join(`
               "sport": "run",
               "type": "pacing",
               "name": "Pacing rehearsal 5K",
-              "description": "Warm up 15 menit. Main: 5K dengan target EVEN SPLIT, setiap km di 5:00–5:10/km. Tahan diri di km 1! Jangan lebih cepat dari 5:00/km meski terasa mudah. Cool down 10 menit. Catat split per km di Garmin.",
+              "description": "Warm up 15 menit. Main: 5K EVEN SPLIT, setiap km di 5:00–5:10/km. Tahan diri di km 1! Jangan lebih cepat dari 5:00/km. Cool down 10 menit. Catat split per km di Garmin.",
               "durationMinutes": 45,
               "distanceKm": 8,
               "primaryZone": "Zone 4",
-              "hrTarget": "166–175 bpm",
+              "hrTarget": "165–174 bpm",
               "paceTarget": "5:00–5:10/km even split",
               "completed": false
             }
@@ -386,7 +304,7 @@ ${a.join(`
               "sport": "rest",
               "type": "rest",
               "name": "Rest",
-              "description": "Istirahat atau jalan santai 30 menit maksimal.",
+              "description": "Istirahat.",
               "completed": false
             }
           ]
@@ -400,7 +318,7 @@ ${a.join(`
               "sport": "run",
               "type": "long",
               "name": "Long run Zone 2",
-              "description": "55 menit Zone 2 (HR 143–157 bpm). Rute flat, pagi sebelum panas. Di cuaca ekstrem: tambah 15 detik/km ke target pace. Fokus konsisten, bukan cepat.",
+              "description": "55 menit Zone 2 (HR 143–157 bpm). Rute flat, pagi sebelum panas. Di cuaca ekstrem tambah 15 detik/km. Fokus konsisten, bukan cepat.",
               "durationMinutes": 55,
               "distanceKm": 9,
               "primaryZone": "Zone 2",
@@ -418,7 +336,7 @@ ${a.join(`
               "sport": "rest",
               "type": "rest",
               "name": "Rest aktif",
-              "description": "Peregangan ringan atau foam rolling.",
+              "description": "Foam rolling, peregangan ringan.",
               "completed": false
             }
           ]
@@ -442,10 +360,10 @@ ${a.join(`
       "startDate": "2026-05-18",
       "endDate": "2026-05-24",
       "phase": "Base & Pacing",
-      "focus": "Volume naik, pacing discipline lanjut + cruise intervals",
-      "targetKm": 30,
+      "focus": "Volume naik + cruise intervals pertama",
+      "targetKm": 29,
       "isRecoveryWeek": false,
-      "coachNote": "Kalau pacing rehearsal minggu lalu terasa 'terlalu mudah di km 1' — itu bagus. Sekarang kita tambah cruise intervals untuk mulai stimulus threshold.",
+      "coachNote": "Kalau pacing rehearsal W1 terasa 'terlalu mudah di km 1' — itu bagus. Tambah cruise intervals untuk mulai stimulus threshold ringan.",
       "days": [
         {
           "date": "2026-05-18",
@@ -470,7 +388,7 @@ ${a.join(`
               "sport": "run",
               "type": "aerobic",
               "name": "Easy run + drills",
-              "description": "45 menit Zone 2. Selipkan A-skip dan high knees 2×30m di tengah sesi. Akhir: 8×15 detik strides.",
+              "description": "45 menit Zone 2. A-skip dan high knees 2×30m di tengah sesi. Akhir: 8×15 detik strides.",
               "durationMinutes": 50,
               "distanceKm": 8,
               "primaryZone": "Zone 2",
@@ -487,8 +405,8 @@ ${a.join(`
               "id": "w2-wed",
               "sport": "strength",
               "type": "strength",
-              "name": "Strength — lower body focus",
-              "description": "3 putaran: Bulgarian split squat ×10/kaki, Hip thrust ×15, Nordic curl ×6 (eksentrik lambat), Plank 60 detik, Dead bug ×12/sisi.",
+              "name": "Strength — lower body",
+              "description": "3 putaran: Bulgarian split squat ×10/kaki, Hip thrust ×15, Nordic curl ×6 eksentrik, Plank 60 detik, Dead bug ×12/sisi.",
               "durationMinutes": 45,
               "completed": false
             }
@@ -503,11 +421,11 @@ ${a.join(`
               "sport": "run",
               "type": "threshold",
               "name": "Cruise intervals 4×1200m",
-              "description": "Warm up 15 menit. Main: 4×1200m @ 4:55–5:00/km (Zone 4–5a, HR 166–181 bpm), recovery jog 90 detik. Cool down 10 menit. Fokus: setiap rep konsisten, bukan makin cepat.",
+              "description": "Warm up 15 menit. Main: 4×1200m @ 4:55–5:00/km (Zone 4–5a, HR 165–179 bpm), recovery jog 90 detik. Cool down 10 menit. Setiap rep konsisten.",
               "durationMinutes": 55,
               "distanceKm": 10,
               "primaryZone": "Zone 4–5a",
-              "hrTarget": "166–181 bpm",
+              "hrTarget": "165–179 bpm",
               "paceTarget": "4:55–5:00/km",
               "completed": false
             }
@@ -535,8 +453,8 @@ ${a.join(`
               "id": "w2-sat",
               "sport": "run",
               "type": "long",
-              "name": "Long run Zone 2 — lebih panjang",
-              "description": "65 menit Zone 2. 15 menit pertama harus terasa sangat santai. Biarkan HR naik perlahan. Di atas 30 menit: kalau HR >160, pelan.",
+              "name": "Long run Zone 2",
+              "description": "65 menit Zone 2. 15 menit pertama sangat santai. Di atas 30 menit: HR >160 → pelan.",
               "durationMinutes": 65,
               "distanceKm": 11,
               "primaryZone": "Zone 2",
@@ -554,7 +472,7 @@ ${a.join(`
               "sport": "rest",
               "type": "rest",
               "name": "Rest + review",
-              "description": "Review data Garmin minggu ini. Bandingkan HR di easy run. Apakah pace Zone 2 membaik?",
+              "description": "Review data Garmin minggu ini.",
               "completed": false
             }
           ]
@@ -578,10 +496,10 @@ ${a.join(`
       "startDate": "2026-05-25",
       "endDate": "2026-05-31",
       "phase": "Base & Pacing",
-      "focus": "4 sesi lari + tempo run pertama",
+      "focus": "4 sesi lari + tempo run kontinu 20 menit",
       "targetKm": 33,
       "isRecoveryWeek": false,
-      "coachNote": "Minggu ini tambah satu sesi lari pendek. Tempo run 20 menit kontinu — ini lebih menantang dari interval pendek karena tidak ada jeda recovery.",
+      "coachNote": "Tambah satu sesi recovery run. Tempo run 20 menit kontinu lebih menantang dari interval karena tidak ada jeda.",
       "days": [
         {
           "date": "2026-05-25",
@@ -606,7 +524,7 @@ ${a.join(`
               "sport": "run",
               "type": "aerobic",
               "name": "Easy + strides",
-              "description": "50 menit Zone 2 + 8×15 detik strides. Fokus: high knee lift, cepat mengangkat kaki dari tanah.",
+              "description": "50 menit Zone 2 + 8×15 detik strides. Fokus: high knee lift, quick foot strike.",
               "durationMinutes": 55,
               "distanceKm": 9,
               "primaryZone": "Zone 2",
@@ -623,7 +541,7 @@ ${a.join(`
               "sport": "run",
               "type": "recovery",
               "name": "Recovery run pendek",
-              "description": "25–30 menit sangat santai. HR harus di bawah 148 bpm sepanjang waktu.",
+              "description": "25–30 menit sangat santai. HR < 148 bpm sepanjang waktu.",
               "durationMinutes": 30,
               "distanceKm": 4,
               "primaryZone": "Zone 1",
@@ -650,11 +568,11 @@ ${a.join(`
               "sport": "run",
               "type": "threshold",
               "name": "Tempo run 20 menit",
-              "description": "Warm up 15 menit. Main: 20 menit CONTINUOUS @ 5:00–5:05/km (Zone 4, HR 166–175 bpm). Satu blok panjang tanpa jeda. Cool down 10 menit. Fokus: maintain pace tanpa collapse di menit ke-15.",
+              "description": "Warm up 15 menit. Main: 20 menit CONTINUOUS @ 5:00–5:05/km (Zone 4, HR 165–174 bpm). Satu blok panjang tanpa jeda. Cool down 10 menit. Fokus: maintain pace tanpa collapse di menit ke-15.",
               "durationMinutes": 50,
               "distanceKm": 10,
               "primaryZone": "Zone 4",
-              "hrTarget": "166–175 bpm",
+              "hrTarget": "165–174 bpm",
               "paceTarget": "5:00–5:05/km",
               "completed": false
             }
@@ -683,7 +601,7 @@ ${a.join(`
               "sport": "run",
               "type": "long",
               "name": "Long run dengan finish pickup",
-              "description": "70 menit total. 55 menit Zone 2, 15 menit terakhir Zone 3 (HR 159–165). Latihan finishing kuat di kondisi lelah.",
+              "description": "70 menit total. 55 menit Zone 2, 15 menit terakhir Zone 3 (HR 158–164). Latihan finishing kuat di kondisi lelah.",
               "durationMinutes": 70,
               "distanceKm": 12,
               "primaryZone": "Zone 2–3",
@@ -727,7 +645,7 @@ ${a.join(`
       "focus": "Recovery week + race simulation pertama",
       "targetKm": 22,
       "isRecoveryWeek": true,
-      "coachNote": "Recovery week sekaligus race simulation pertama. Volume turun 35% tapi Sabtu ada race sim — ini test pacing disiplin yang sudah dilatih 3 minggu. Bukan PR attempt.",
+      "coachNote": "Recovery week sekaligus race simulation pertama Sabtu. Volume turun 35% tapi ada race sim — test pacing disiplin yang sudah dilatih 3 minggu. Bukan PR attempt, murni eksperimen negative split.",
       "days": [
         {
           "date": "2026-06-01",
@@ -769,7 +687,7 @@ ${a.join(`
               "sport": "strength",
               "type": "strength",
               "name": "Strength ringan",
-              "description": "2 putaran saja. Tambah mobilitas: hip flexor stretch, calf stretch, IT band.",
+              "description": "2 putaran. Tambah mobilitas: hip flexor stretch, calf stretch, IT band.",
               "durationMinutes": 30,
               "completed": false
             }
@@ -814,8 +732,8 @@ ${a.join(`
               "id": "w4-sat",
               "sport": "run",
               "type": "race_sim",
-              "name": "Race simulation 5K — pacing target",
-              "description": "Warm up 15 menit. Main: 5K target 22:30–23:00 (4:30–4:36/km). Strategi: Km 1 mulai di 4:40 (TAHAN!), km 2–3 naik ke 4:30, km 4–5 keluarkan sisanya. Catat split per km. Ini bukan all-out — ini latihan pacing. Cool down 10 menit.",
+              "name": "Race simulation #1 — negative split",
+              "description": "Warm up 15 menit. Main: 5K target 22:30–23:00 (4:30–4:36/km). Strategi WAJIB: Km 1 di 4:40, km 2–3 naik ke 4:30, km 4–5 keluarkan sisanya. Catat split per km. Ini latihan pacing, bukan PR attempt. Cool down 10 menit.",
               "durationMinutes": 50,
               "distanceKm": 8,
               "primaryZone": "Zone 4–5a",
@@ -833,7 +751,7 @@ ${a.join(`
               "sport": "rest",
               "type": "rest",
               "name": "Rest + analisis",
-              "description": "Review data Garmin race sim. Apakah negative split? Bagaimana HR progression?",
+              "description": "Review Garmin: apakah negative split? HR progression bagaimana?",
               "completed": false
             }
           ]
@@ -857,10 +775,10 @@ ${a.join(`
       "startDate": "2026-06-08",
       "endDate": "2026-06-14",
       "phase": "Build & Threshold",
-      "focus": "Masuk Build — threshold intervals 4×2000m",
-      "targetKm": 34,
+      "focus": "Build phase — threshold intervals 4×2000m",
+      "targetKm": 35,
       "isRecoveryWeek": false,
-      "coachNote": "Build phase dimulai! Base sudah 4 minggu — sekarang waktunya threshold work yang lebih serius. Sesi 4×2000m ini adalah sesi utama minggu ini, berikan energi penuh.",
+      "coachNote": "Build phase dimulai! Base 4 minggu sudah cukup. Threshold 4×2000m adalah sesi utama minggu ini — berikan energi penuh.",
       "days": [
         {
           "date": "2026-06-08",
@@ -884,7 +802,7 @@ ${a.join(`
               "id": "w5-tue",
               "sport": "run",
               "type": "aerobic",
-              "name": "Easy + strides panjang",
+              "name": "Easy + strides",
               "description": "50 menit Zone 2 + 10×15 detik strides. Fokus form: high hips, slight forward lean, quick foot strike.",
               "durationMinutes": 55,
               "distanceKm": 9,
@@ -917,7 +835,7 @@ ${a.join(`
               "sport": "run",
               "type": "threshold",
               "name": "Threshold intervals 4×2000m",
-              "description": "Warm up 15 menit. Main: 4×2000m @ 4:55/km (Zone 5a, HR 176–179 bpm), recovery jog 2 menit. Cool down 12 menit. Ini sesi utama minggu ini.",
+              "description": "Warm up 15 menit. Main: 4×2000m @ 4:55/km (Zone 5a, HR 176–179 bpm), recovery jog 2 menit. Cool down 12 menit.",
               "durationMinutes": 65,
               "distanceKm": 13,
               "primaryZone": "Zone 5a",
@@ -935,8 +853,8 @@ ${a.join(`
               "id": "w5-fri",
               "sport": "run",
               "type": "recovery",
-              "name": "Recovery run 30 menit",
-              "description": "30 menit sangat santai. HR < 148 bpm. Kalau lelah dari Kamis, kurangi ke 20 menit.",
+              "name": "Recovery 30 menit",
+              "description": "30 menit sangat santai. HR < 148 bpm. Kalau masih lelah dari Kamis, kurangi ke 20 menit.",
               "durationMinutes": 30,
               "distanceKm": 5,
               "primaryZone": "Zone 1",
@@ -995,9 +913,9 @@ ${a.join(`
       "endDate": "2026-06-21",
       "phase": "Build & Threshold",
       "focus": "VO2max masuk — 5×1000m",
-      "targetKm": 36,
+      "targetKm": 34,
       "isRecoveryWeek": false,
-      "coachNote": "VO2max intervals masuk minggu ini. Pendek tapi sangat intens — butuh 48-72 jam recovery penuh setelahnya. Maksimal 1× per minggu.",
+      "coachNote": "VO2max intervals pertama. Pendek tapi sangat intens — butuh 48–72 jam recovery. Maksimal 1× per minggu.",
       "days": [
         {
           "date": "2026-06-15",
@@ -1054,11 +972,11 @@ ${a.join(`
               "sport": "run",
               "type": "vo2max",
               "name": "VO2max — 5×1000m",
-              "description": "Warm up 15 menit + 6×100m strides. Main: 5×1000m @ 4:35/km (Zone 5b, HR 182–188 bpm), recovery jog 400m pelan (2–2.5 menit). Cool down 15 menit. Setiap rep harus terasa sangat berat di 700m terakhir.",
+              "description": "Warm up 15 menit + 6×100m strides. Main: 5×1000m @ 4:35/km (Zone 5b, HR 181–187 bpm), recovery jog 400m pelan 2–2.5 menit. Cool down 15 menit. Setiap rep berat di 700m terakhir.",
               "durationMinutes": 65,
               "distanceKm": 13,
               "primaryZone": "Zone 5b",
-              "hrTarget": "182–188 bpm",
+              "hrTarget": "181–187 bpm",
               "paceTarget": "4:35/km",
               "completed": false
             }
@@ -1073,7 +991,7 @@ ${a.join(`
               "sport": "rest",
               "type": "rest",
               "name": "Rest wajib",
-              "description": "Setelah VO2max Kamis, WAJIB istirahat. Jangan lari.",
+              "description": "Setelah VO2max Kamis — wajib istirahat. Jangan lari.",
               "completed": false
             }
           ]
@@ -1087,7 +1005,7 @@ ${a.join(`
               "sport": "run",
               "type": "long",
               "name": "Long run Zone 2",
-              "description": "70 menit Zone 2. Setelah VO2max kemarin, tubuh butuh aerobic recovery panjang.",
+              "description": "70 menit Zone 2 santai. Aerobic recovery panjang setelah VO2max kemarin.",
               "durationMinutes": 70,
               "distanceKm": 12,
               "primaryZone": "Zone 2",
@@ -1129,9 +1047,9 @@ ${a.join(`
       "endDate": "2026-06-28",
       "phase": "Build & Threshold",
       "focus": "Recovery week — restorasi setelah 3 minggu build",
-      "targetKm": 22,
+      "targetKm": 21,
       "isRecoveryWeek": true,
-      "coachNote": "Recovery week kedua. Setelah ini ada 2 minggu build peak sebelum masuk Peak phase. Manfaatkan recovery ini — tidur, makan, istirahat. Adaptasi terjadi saat recovery, bukan saat kerja keras.",
+      "coachNote": "Recovery week kedua. Setelah ini ada 2 minggu build peak. Adaptasi terjadi saat recovery, bukan saat kerja keras. Tidur, makan, istirahat.",
       "days": [
         {
           "date": "2026-06-22",
@@ -1172,8 +1090,8 @@ ${a.join(`
               "id": "w7-wed",
               "sport": "strength",
               "type": "strength",
-              "name": "Strength ringan — 2 putaran",
-              "description": "2 putaran saja. Prioritas mobilitas dan peregangan.",
+              "name": "Strength ringan",
+              "description": "2 putaran. Prioritas mobilitas dan peregangan.",
               "durationMinutes": 30,
               "completed": false
             }
@@ -1219,7 +1137,7 @@ ${a.join(`
               "sport": "run",
               "type": "long",
               "name": "Long run pendek 50 menit",
-              "description": "50 menit Zone 2 santai. Lebih pendek dari minggu-minggu sebelumnya.",
+              "description": "50 menit Zone 2 santai.",
               "durationMinutes": 50,
               "distanceKm": 8,
               "primaryZone": "Zone 2",
@@ -1263,7 +1181,7 @@ ${a.join(`
       "focus": "Peak volume — 5×2000m threshold + VO2max 6×800m",
       "targetKm": 42,
       "isRecoveryWeek": false,
-      "coachNote": "Minggu terberat dalam rencana ini. Volume peak dan sesi threshold terpanjang. Kalau selesai minggu ini, kamu sudah melewati titik paling sulit. Mental kuat.",
+      "coachNote": "Minggu terberat dalam rencana ini. Peak volume dan sesi threshold terpanjang. Kalau selesai minggu ini, titik terberat sudah terlampaui.",
       "days": [
         {
           "date": "2026-06-29",
@@ -1288,7 +1206,7 @@ ${a.join(`
               "sport": "run",
               "type": "aerobic",
               "name": "Easy 55 menit + strides",
-              "description": "55 menit Zone 2 + 10 strides. Jaga HR di bawah 158 sepanjang waktu.",
+              "description": "55 menit Zone 2 + 10 strides. HR di bawah 157 sepanjang waktu.",
               "durationMinutes": 60,
               "distanceKm": 10,
               "primaryZone": "Zone 2",
@@ -1305,7 +1223,7 @@ ${a.join(`
               "sport": "strength",
               "type": "strength",
               "name": "Strength power",
-              "description": "3 putaran penuh. Focus: single-leg explosiveness.",
+              "description": "3 putaran penuh. Fokus: single-leg explosiveness.",
               "durationMinutes": 45,
               "completed": false
             }
@@ -1320,7 +1238,7 @@ ${a.join(`
               "sport": "run",
               "type": "threshold",
               "name": "Threshold peak — 5×2000m",
-              "description": "Warm up 15 menit. Main: 5×2000m @ 4:52–4:55/km (Zone 5a), recovery jog 2 menit. Cool down 12 menit. PEAK threshold session — titik terberat rencana ini.",
+              "description": "Warm up 15 menit. Main: 5×2000m @ 4:52–4:55/km (Zone 5a, HR 176–179 bpm), recovery jog 2 menit. Cool down 12 menit. PEAK threshold session.",
               "durationMinutes": 75,
               "distanceKm": 16,
               "primaryZone": "Zone 5a",
@@ -1339,11 +1257,11 @@ ${a.join(`
               "sport": "run",
               "type": "vo2max",
               "name": "VO2max — 6×800m",
-              "description": "Warm up 15 menit + strides. Main: 6×800m @ 4:15–4:20/km (Zone 5b), recovery 90 detik jog. Cool down 12 menit. Lebih pendek dari 1000m tapi lebih cepat — fokus di leg turnover.",
+              "description": "Warm up 15 menit + strides. Main: 6×800m @ 4:15–4:20/km (Zone 5b, HR 181–187 bpm), recovery 90 detik jog. Cool down 12 menit. Fokus leg turnover.",
               "durationMinutes": 60,
               "distanceKm": 12,
               "primaryZone": "Zone 5b",
-              "hrTarget": "182–188 bpm",
+              "hrTarget": "181–187 bpm",
               "paceTarget": "4:15–4:20/km",
               "completed": false
             }
@@ -1399,10 +1317,10 @@ ${a.join(`
       "startDate": "2026-07-06",
       "endDate": "2026-07-12",
       "phase": "Build & Threshold",
-      "focus": "Race simulation kedua — target sub-22",
+      "focus": "Race simulation #2 — validasi fitness setelah peak",
       "targetKm": 34,
       "isRecoveryWeek": false,
-      "coachNote": "Setelah peak volume minggu lalu, volume turun tapi Sabtu ada race sim kedua. Ini validasi fitness setelah 9 minggu latihan. Target 21:30–22:00 dengan negative split ketat.",
+      "coachNote": "Volume turun dari peak tapi Sabtu ada race sim #2. Ini validasi fitness sebenarnya setelah 9 minggu. Target 21:30–22:00 dengan negative split ketat.",
       "days": [
         {
           "date": "2026-07-06",
@@ -1490,8 +1408,8 @@ ${a.join(`
               "id": "w9-sat",
               "sport": "run",
               "type": "race_sim",
-              "name": "Race simulation 5K — target 21:30–22:00",
-              "description": "Warm up 15 menit. Main: 5K target 21:30–22:00 (4:18–4:24/km). Strategi: Km 1 di 4:30 (TAHAN!), km 2–4 di 4:18–4:22, km 5 all out. Ini test fitness sebenarnya setelah 9 minggu.",
+              "name": "Race simulation #2 — target 21:30–22:00",
+              "description": "Warm up 15 menit. Main: 5K target 21:30–22:00 (4:18–4:24/km). Strategi: Km 1 di 4:30 (TAHAN!), km 2–4 di 4:18–4:22, km 5 all out. Cool down 10 menit.",
               "durationMinutes": 55,
               "distanceKm": 8,
               "primaryZone": "Zone 5a–5b",
@@ -1508,8 +1426,8 @@ ${a.join(`
               "id": "w9-sun",
               "sport": "rest",
               "type": "rest",
-              "name": "Rest + analisis mendalam",
-              "description": "Analisis data race sim. Bandingkan dengan race sim minggu ke-4. Apakah pacing lebih baik? HR lebih terkontrol?",
+              "name": "Rest + analisis",
+              "description": "Bandingkan dengan race sim #1. Apakah pacing lebih baik? HR lebih terkontrol?",
               "completed": false
             }
           ]
@@ -1533,10 +1451,10 @@ ${a.join(`
       "startDate": "2026-07-13",
       "endDate": "2026-07-19",
       "phase": "Peak & Sharpen",
-      "focus": "Race pace 400m reps + neuromuscular sharpening",
+      "focus": "Race pace 400m reps — neuromuscular sharpening",
       "targetKm": 32,
       "isRecoveryWeek": false,
-      "coachNote": "Peak phase! Sekarang kita lari di race pace (3:59–4:05/km). Sesi pendek dan cepat — bukan soal volume, tapi neuromuscular sharpening.",
+      "coachNote": "Peak phase! Pertama kali lari di race pace 3:59–4:05/km secara berulang. Sesi pendek dan cepat — neuromuscular sharpening, bukan volume.",
       "days": [
         {
           "date": "2026-07-13",
@@ -1578,7 +1496,7 @@ ${a.join(`
               "sport": "strength",
               "type": "strength",
               "name": "Strength — power + core",
-              "description": "3 putaran: Jump squat ×8, Single-leg hop ×6/kaki, Plank 75 detik, Dead bug ×15/sisi. Fokus explosiveness.",
+              "description": "3 putaran: Jump squat ×8, Single-leg hop ×6/kaki, Plank 75 detik, Dead bug ×15/sisi.",
               "durationMinutes": 40,
               "completed": false
             }
@@ -1593,12 +1511,12 @@ ${a.join(`
               "sport": "run",
               "type": "repetition",
               "name": "10×400m race pace reps",
-              "description": "Warm up 20 menit. Main: 10×400m @ 3:59–4:05/km (race pace goal), recovery jog 400m santai. Cool down 12 menit. Ini bukan sprint — ini race pace yang harus terasa 'cepat tapi terkontrol'.",
+              "description": "Warm up 20 menit. Main: 10×400m @ 3:59–4:05/km, recovery jog 400m santai. Cool down 12 menit. Race pace — terasa cepat tapi terkontrol.",
               "durationMinutes": 70,
               "distanceKm": 13,
               "primaryZone": "Zone 5b–5c",
-              "hrTarget": "182–192 bpm",
-              "paceTarget": "3:59–4:05/km per 400m",
+              "hrTarget": "181–196 bpm",
+              "paceTarget": "3:59–4:05/km",
               "completed": false
             }
           ]
@@ -1611,8 +1529,8 @@ ${a.join(`
               "id": "w10-fri",
               "sport": "rest",
               "type": "rest",
-              "name": "Rest",
-              "description": "Wajib istirahat setelah 400m reps.",
+              "name": "Rest wajib",
+              "description": "Istirahat setelah 400m reps.",
               "completed": false
             }
           ]
@@ -1626,7 +1544,7 @@ ${a.join(`
               "sport": "run",
               "type": "long",
               "name": "Long run Zone 2 + race pace finish",
-              "description": "65 menit total. 50 menit Zone 2, 10 menit Zone 3, 5 menit terakhir @ race pace (4:00/km). Latihan finishing kuat di kondisi lelah.",
+              "description": "65 menit total. 50 menit Zone 2, 10 menit Zone 3, 5 menit terakhir @ 4:00/km. Finishing kuat di kondisi lelah.",
               "durationMinutes": 65,
               "distanceKm": 11,
               "primaryZone": "Zone 2–3",
@@ -1667,10 +1585,10 @@ ${a.join(`
       "startDate": "2026-07-20",
       "endDate": "2026-07-26",
       "phase": "Peak & Sharpen",
-      "focus": "Race simulation final — ambisi sub-21 + mulai taper",
+      "focus": "Race sim #3 final + 6×400m sharpener",
       "targetKm": 28,
       "isRecoveryWeek": false,
-      "coachNote": "Race sim terakhir sebelum race week. Target 20:30–21:00. Volume mulai turun — ini awal taper. Strategi: negative split ketat, km 1 JANGAN lebih cepat dari 4:10.",
+      "coachNote": "Race sim final Sabtu 25 Juli — 15 hari sebelum race day. Target 20:30–21:00. Volume mulai turun — awal taper. Ini data validasi terpenting sebelum race.",
       "days": [
         {
           "date": "2026-07-20",
@@ -1695,7 +1613,7 @@ ${a.join(`
               "sport": "run",
               "type": "aerobic",
               "name": "Easy 40 menit",
-              "description": "40 menit Zone 2. Persiapkan untuk race sim Sabtu.",
+              "description": "40 menit Zone 2. Simpan untuk Kamis dan Sabtu.",
               "durationMinutes": 40,
               "distanceKm": 7,
               "primaryZone": "Zone 2",
@@ -1711,8 +1629,8 @@ ${a.join(`
               "id": "w11-wed",
               "sport": "strength",
               "type": "strength",
-              "name": "Strength ringan — 2 putaran",
-              "description": "2 putaran saja. Hemat energi.",
+              "name": "Strength ringan",
+              "description": "2 putaran. Hemat energi.",
               "durationMinutes": 35,
               "completed": false
             }
@@ -1727,7 +1645,7 @@ ${a.join(`
               "sport": "run",
               "type": "repetition",
               "name": "6×400m race pace — segar",
-              "description": "Warm up 15 menit. Main: 6×400m @ 3:55–4:00/km, recovery 90 detik. Cool down 10 menit. Sedikit lebih cepat — neuromuscular reminder.",
+              "description": "Warm up 15 menit. Main: 6×400m @ 3:55–4:00/km, recovery 90 detik. Cool down 10 menit. Sedikit lebih cepat dari target race — neuromuscular reminder.",
               "durationMinutes": 45,
               "distanceKm": 9,
               "primaryZone": "Zone 5b",
@@ -1744,7 +1662,7 @@ ${a.join(`
               "id": "w11-fri",
               "sport": "rest",
               "type": "rest",
-              "name": "Rest + race prep mental",
+              "name": "Rest + visualisasi",
               "description": "Istirahat. Visualisasi race plan: km 1 di 4:10, km 2 di 4:03, km 3–4 di 3:58, km 5 all out.",
               "completed": false
             }
@@ -1759,11 +1677,11 @@ ${a.join(`
               "sport": "run",
               "type": "race_sim",
               "name": "Race simulation FINAL — target sub-21",
-              "description": "Warm up 15 menit. Main: 5K all-out dengan pacing strategy: Km 1 di 4:10–4:12 (tahan!), Km 2 di 4:03, Km 3–4 di 3:58–4:02, Km 5 habiskan semua. Target: 20:30–21:00. Cool down 12 menit.",
+              "description": "Warm up 15 menit. Main: 5K all-out dengan pacing: Km 1 di 4:10–4:12 (tahan!), Km 2 di 4:03, Km 3–4 di 3:58–4:02, Km 5 habiskan semua. Target: 20:30–21:00. Cool down 12 menit.",
               "durationMinutes": 50,
               "distanceKm": 8,
               "primaryZone": "Zone 5a–5b",
-              "paceTarget": "4:00–4:10/km — negative split ketat",
+              "paceTarget": "4:00–4:10/km negative split ketat",
               "completed": false
             }
           ]
@@ -1776,8 +1694,8 @@ ${a.join(`
               "id": "w11-sun",
               "sport": "rest",
               "type": "rest",
-              "name": "Rest + review data final",
-              "description": "Analisis race sim. Data validasi terpenting sebelum race day 9 Agustus.",
+              "name": "Rest + analisis final",
+              "description": "Analisis mendalam data race sim. Konfirmasi pacing plan race day 9 Agustus.",
               "completed": false
             }
           ]
@@ -1801,10 +1719,10 @@ ${a.join(`
       "startDate": "2026-07-27",
       "endDate": "2026-08-02",
       "phase": "Taper & Race",
-      "focus": "Taper dimulai + race simulation final",
-      "targetKm": 13,
+      "focus": "Taper — volume turun 50%, jaga sharpness",
+      "targetKm": 18,
       "isRecoveryWeek": false,
-      "coachNote": "Taper dimulai minggu ini. Volume turun 40% tapi ada race simulation final Sabtu 1 Agustus — 8 hari sebelum race day. Ini sesi paling penting untuk validasi fitness dan konfirmasi pacing plan.",
+      "coachNote": "Taper minggu pertama. Volume turun drastis tapi intensitas TIDAK hilang — kamu tetap lari di race pace dalam dosis kecil. Tubuh sedang menumpuk energi untuk 9 Agustus. Jangan panik merasa 'tidak cukup latihan'.",
       "days": [
         {
           "date": "2026-07-27",
@@ -1814,8 +1732,8 @@ ${a.join(`
               "id": "w12-mon",
               "sport": "rest",
               "type": "rest",
-              "name": "Rest penuh",
-              "description": "Istirahat total. Tidur siang kalau bisa.",
+              "name": "Rest",
+              "description": "Istirahat.",
               "completed": false
             }
           ]
@@ -1828,11 +1746,11 @@ ${a.join(`
               "id": "w12-tue",
               "sport": "run",
               "type": "aerobic",
-              "name": "Easy 30 menit",
-              "description": "30 menit sangat santai. HR < 150 bpm. Tidak lebih.",
-              "durationMinutes": 30,
-              "distanceKm": 5,
-              "primaryZone": "Zone 1–2",
+              "name": "Easy 40 menit + strides",
+              "description": "40 menit Zone 2 santai + 6×15 detik strides di race pace. Tubuh perlu diingatkan kecepatan meski volume kecil.",
+              "durationMinutes": 40,
+              "distanceKm": 7,
+              "primaryZone": "Zone 2",
               "completed": false
             }
           ]
@@ -1843,10 +1761,11 @@ ${a.join(`
           "workouts": [
             {
               "id": "w12-wed",
-              "sport": "rest",
-              "type": "rest",
-              "name": "Rest",
-              "description": "Istirahat. Persiapkan perlengkapan race: sepatu, baju, minum.",
+              "sport": "strength",
+              "type": "strength",
+              "name": "Strength maintenance",
+              "description": "2 putaran, beban lebih ringan. Jaga otot aktif tapi jangan sampai lelah.",
+              "durationMinutes": 30,
               "completed": false
             }
           ]
@@ -1858,12 +1777,13 @@ ${a.join(`
             {
               "id": "w12-thu",
               "sport": "run",
-              "type": "shakeout",
-              "name": "Shakeout + race pace",
-              "description": "20 menit total: 10 menit Zone 1–2, 4×100m @ race pace dengan recovery jalan, 5 menit santai. Tujuan: ingatkan kaki race pace, jangan capek.",
-              "durationMinutes": 25,
-              "distanceKm": 4,
-              "primaryZone": "Zone 1–2",
+              "type": "repetition",
+              "name": "5×400m race pace — taper sharpener",
+              "description": "Warm up 15 menit. Main: 5×400m @ 3:55–4:00/km, recovery jog 90 detik. Cool down 10 menit. Pendek dan segar — reminder neuromuscular, bukan kelelahan.",
+              "durationMinutes": 40,
+              "distanceKm": 7,
+              "primaryZone": "Zone 5b",
+              "paceTarget": "3:55–4:00/km",
               "completed": false
             }
           ]
@@ -1876,8 +1796,8 @@ ${a.join(`
               "id": "w12-fri",
               "sport": "rest",
               "type": "rest",
-              "name": "Rest total — D-2",
-              "description": "Istirahat penuh. Makan baik: karbohidrat cukup. Tidur lebih awal. Hindari makanan baru.",
+              "name": "Rest",
+              "description": "Istirahat.",
               "completed": false
             }
           ]
@@ -1889,12 +1809,12 @@ ${a.join(`
             {
               "id": "w12-sat",
               "sport": "run",
-              "type": "shakeout",
-              "name": "Shakeout pendek — D-1",
-              "description": "15 menit jalan + lari santai. Tidak lebih. Coba sepatu race. Visualisasi race plan. Tidur cukup malam ini.",
-              "durationMinutes": 15,
-              "distanceKm": 2,
-              "primaryZone": "Zone 1",
+              "type": "aerobic",
+              "name": "Easy 30 menit + pickup",
+              "description": "25 menit Zone 2, 5 menit terakhir Zone 3–4. Tidak ada long run — tubuh butuh simpan glikogen. Ini bukan waktunya nambah volume.",
+              "durationMinutes": 30,
+              "distanceKm": 5,
+              "primaryZone": "Zone 2",
               "completed": false
             }
           ]
@@ -1904,27 +1824,25 @@ ${a.join(`
           "dayOfWeek": "Sunday",
           "workouts": [
             {
-              "id": "w12-race",
-              "sport": "run",
-              "type": "race",
-              "name": "RACE DAY — Sub-20 5K",
-              "description": "Warm up 15–20 menit. 4×100m strides di race pace. RACE PLAN: Km 1 di 4:05–4:10 (JANGAN LEBIH CEPAT meski terasa mudah — ini pelajaran 12 minggu). Km 2 naik ke 4:00–4:05. Km 3 maintain 4:00. Km 4 push jika HR oke. Km 5 habiskan semua. TARGET: 19:59.",
-              "durationMinutes": 40,
-              "distanceKm": 5,
-              "primaryZone": "Zone 5a–5b",
-              "hrTarget": "176–187 bpm",
-              "paceTarget": "3:59/km rata-rata — negative split",
+              "id": "w12-sun",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Rest total",
+              "description": "Istirahat penuh. Persiapkan mental dan logistik race: rute, start time, sarapan, sepatu.",
               "completed": false
             }
           ]
         }
       ],
       "summary": {
-        "totalKm": 11,
+        "totalKm": 19,
         "bySport": {
           "run": {
-            "sessions": 4,
-            "km": 11
+            "sessions": 3,
+            "km": 19
+          },
+          "strength": {
+            "sessions": 1
           }
         }
       }
@@ -1934,21 +1852,21 @@ ${a.join(`
       "startDate": "2026-08-03",
       "endDate": "2026-08-09",
       "phase": "Taper & Race",
-      "focus": "RACE WEEK — simpan energi, jaga sharpness",
-      "targetKm": 13,
+      "focus": "Race week — simpan energi, eksekusi sempurna",
+      "targetKm": 11,
       "isRecoveryWeek": true,
-      "coachNote": "RACE WEEK. Kamu tidak bisa lagi menambah fitness — tugasmu sekarang adalah datang ke garis start dalam kondisi paling fresh. Percaya semua 11 minggu yang sudah kamu lakukan.",
+      "coachNote": "RACE WEEK. Tidak ada lagi fitness yang bisa ditambah — tugasmu sekarang hanya satu: datang ke garis start dalam kondisi paling fresh. Percaya 13 minggu yang sudah kamu investasikan.",
       "days": [
         {
           "date": "2026-08-03",
           "dayOfWeek": "Monday",
           "workouts": [
             {
-              "id": "w12-mon",
+              "id": "w13-mon",
               "sport": "rest",
               "type": "rest",
               "name": "Rest penuh",
-              "description": "Istirahat total. Tidur siang kalau bisa.",
+              "description": "Istirahat total. Tidur siang jika bisa.",
               "completed": false
             }
           ]
@@ -1958,14 +1876,15 @@ ${a.join(`
           "dayOfWeek": "Tuesday",
           "workouts": [
             {
-              "id": "w12-tue",
+              "id": "w13-tue",
               "sport": "run",
               "type": "aerobic",
-              "name": "Easy 30 menit",
-              "description": "30 menit sangat santai. HR < 150 bpm. Tidak lebih.",
-              "durationMinutes": 30,
-              "distanceKm": 5,
+              "name": "Easy 25 menit",
+              "description": "25 menit sangat santai, HR < 150 bpm. Tidak lebih. Bukan waktunya nambah volume.",
+              "durationMinutes": 25,
+              "distanceKm": 4,
               "primaryZone": "Zone 1–2",
+              "hrTarget": "<150 bpm",
               "completed": false
             }
           ]
@@ -1975,11 +1894,11 @@ ${a.join(`
           "dayOfWeek": "Wednesday",
           "workouts": [
             {
-              "id": "w12-wed",
+              "id": "w13-wed",
               "sport": "rest",
               "type": "rest",
               "name": "Rest",
-              "description": "Istirahat. Persiapkan perlengkapan race: sepatu, baju, minum.",
+              "description": "Istirahat. Cek perlengkapan race: sepatu, baju, jam, nutrisi.",
               "completed": false
             }
           ]
@@ -1989,14 +1908,14 @@ ${a.join(`
           "dayOfWeek": "Thursday",
           "workouts": [
             {
-              "id": "w12-thu",
+              "id": "w13-thu",
               "sport": "run",
               "type": "shakeout",
-              "name": "Shakeout + race pace",
-              "description": "20 menit total: 10 menit Zone 1–2, 4×100m @ race pace dengan recovery jalan, 5 menit santai. Tujuan: ingatkan kaki race pace, jangan capek.",
-              "durationMinutes": 25,
-              "distanceKm": 4,
-              "primaryZone": "Zone 1–2",
+              "name": "Shakeout + race pace reminder",
+              "description": "20 menit total: 10 menit Zone 1–2 jalan/lari santai, 4×100m @ race pace (3:59/km) dengan recovery jalan penuh, 5 menit santai. Tujuan: ingatkan kaki race pace, jangan capek.",
+              "durationMinutes": 20,
+              "distanceKm": 3,
+              "primaryZone": "Zone 1",
               "completed": false
             }
           ]
@@ -2006,11 +1925,11 @@ ${a.join(`
           "dayOfWeek": "Friday",
           "workouts": [
             {
-              "id": "w12-fri",
+              "id": "w13-fri",
               "sport": "rest",
               "type": "rest",
               "name": "Rest total — D-2",
-              "description": "Istirahat penuh. Makan baik: karbohidrat cukup. Tidur lebih awal. Hindari makanan baru.",
+              "description": "Istirahat penuh. Makan karbohidrat cukup. Tidur lebih awal. Hindari makanan baru dan aktivitas fisik berlebih.",
               "completed": false
             }
           ]
@@ -2020,11 +1939,11 @@ ${a.join(`
           "dayOfWeek": "Saturday",
           "workouts": [
             {
-              "id": "w12-sat",
+              "id": "w13-sat",
               "sport": "run",
               "type": "shakeout",
-              "name": "Shakeout pendek — D-1",
-              "description": "15 menit jalan + lari santai. Tidak lebih. Coba sepatu race. Visualisasi race plan. Tidur cukup malam ini.",
+              "name": "Shakeout D-1 — sangat pendek",
+              "description": "10–15 menit jalan + lari santai. Tidak lebih. Coba sepatu race jika belum pernah. Visualisasi race plan. Tidur cukup malam ini — ini malam paling penting.",
               "durationMinutes": 15,
               "distanceKm": 2,
               "primaryZone": "Zone 1",
@@ -2037,11 +1956,11 @@ ${a.join(`
           "dayOfWeek": "Sunday",
           "workouts": [
             {
-              "id": "w12-race",
+              "id": "w13-race",
               "sport": "run",
               "type": "race",
               "name": "RACE DAY — Sub-20 5K",
-              "description": "Warm up 15–20 menit. 4×100m strides di race pace. RACE PLAN: Km 1 di 4:05–4:10 (JANGAN LEBIH CEPAT meski terasa mudah — ini pelajaran 12 minggu). Km 2 naik ke 4:00–4:05. Km 3 maintain 4:00. Km 4 push jika HR oke. Km 5 habiskan semua. TARGET: 19:59.",
+              "description": "Warm up 15–20 menit pagi. 4×100m strides di race pace. RACE PLAN: Km 1 di 4:05–4:10 (JANGAN lebih cepat meski terasa mudah — pelajaran 13 minggu). Km 2 naik ke 4:00–4:05. Km 3 maintain 4:00. Km 4 push jika HR oke. Km 5 habiskan semua yang tersisa. TARGET: 19:59.",
               "durationMinutes": 40,
               "distanceKm": 5,
               "primaryZone": "Zone 5a–5b",
@@ -2053,11 +1972,11 @@ ${a.join(`
         }
       ],
       "summary": {
-        "totalKm": 11,
+        "totalKm": 9,
         "bySport": {
           "run": {
             "sessions": 4,
-            "km": 11
+            "km": 9
           }
         }
       }
@@ -2080,12 +1999,12 @@ ${a.join(`
           {
             "km": 1,
             "target": "4:05–4:10",
-            "note": "TAHAN DIRI. Terasa sangat mudah — itu bagus. Pelajaran utama dari race 9 Mei."
+            "note": "TAHAN. Terasa sangat mudah — itu bagus. Pelajaran utama dari race 9 Mei."
           },
           {
             "km": 2,
             "target": "4:00–4:05",
-            "note": "Naikkan tempo perlahan. HR harusnya 175–180."
+            "note": "Naikkan perlahan. HR harusnya 175–180."
           },
           {
             "km": 3,
@@ -2100,32 +2019,25 @@ ${a.join(`
           {
             "km": 5,
             "target": "3:45–3:55",
-            "note": "Habiskan semua. Tidak ada yang tersisa di garis finish."
+            "note": "Habiskan semua. Tidak ada yang tersisa di finish."
           }
         ]
       }
     },
     "heatProtocol": {
-      "ifAbove28C": "Tambah 10–15 detik/km ke semua target. Pacing by RPE bukan HR. Mulai dengan pace yang terasa 'sangat santai'.",
-      "hydration": "Minum 300–400ml air 30–45 menit sebelum race. Jika ada water station, semprot kepala bukan hanya minum."
+      "ifAbove28C": "Tambah 10–15 detik/km ke semua target. Pacing by RPE bukan HR. Km 1 harus terasa 'sangat santai'.",
+      "hydration": "Minum 300–400ml 30–45 menit sebelum race. Semprot kepala jika ada water station."
     },
-    "keyLessons": [
-      "Race 9 Mei: km 1 di 4:23 terlalu cepat → collapse km 4 ke 5:04. Jangan ulangi.",
-      "HR 186 bpm di km 2 adalah tanda bahaya — race ini harus dikontrol sampai km 3.",
-      "Cadence drop dari 193 → 173 adalah tanda fatigue form. Cueing 'quick feet' saat lelah.",
-      "GCT 213ms dan power 328w di km 1 adalah bukti mesin ada — distribusikan dengan bijak.",
-      "Max HR 196, LTHR 176 — threshold zone 176–179 bpm, jangan lebih dari ini di km 1–2."
-    ],
     "mentalCues": [
-      "Km 1: 'Ini terasa terlalu mudah' — BAGUS, pertahankan.",
+      "Km 1: 'Ini terasa terlalu mudah' — BAGUS.",
       "Km 2–3: 'Controlled aggression.'",
-      "Km 4: 'Ini yang kita latih 12 minggu.'",
+      "Km 4: 'Ini yang kita latih 13 minggu.'",
       "Km 5: 'Tidak ada yang tersisa di garis finish.'"
     ],
     "taper": {
       "startDate": "2026-07-27",
       "volumeReduction": 50,
-      "notes": "Taper dimulai minggu 11. Kurangi volume 50%, jaga intensitas dengan strides dan short race-pace reps. Race sim final minggu 11 Sabtu 1 Agustus."
+      "notes": "Taper 2 minggu: W12 volume -50% jaga intensitas, W13 race week minimal."
     }
   }
 }
